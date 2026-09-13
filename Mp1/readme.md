@@ -422,10 +422,12 @@ root@698d6ac01b5b:/work# nasm -f elf32 workflow.asm -o workflow.o
 root@698d6ac01b5b:/work# ld -m elf_i386 -o workflow workflow.o
 
 root@698d6ac01b5b:/work# ./workflow
+
 Step 1: Edit
 Step 2: Assemble
 Step 3: Run
 Step 4: Debug
+
 root@698d6ac01b5b:/work# nano workflow.asm
 
 root@698d6ac01b5b:/work# nasm -f elf32 workflow.asm -o workflow.o
@@ -434,11 +436,13 @@ root@698d6ac01b5b:/work# ld -m elf_i386 -o workflow workflow.o
 
 root@698d6ac01b5b:/work# ./workflow
 Step 1: Editroot@698d6ac01b5b:/work# nano workflow.asm
+
 root@698d6ac01b5b:/work# nasm -f elf32 workflow.asm -o workflow.o
 
 root@698d6ac01b5b:/work# ld -m elf_i386 -o workflow workflow.o
 
 root@698d6ac01b5b:/work# ./workflow
+
 Step 1: Edit
 Step 2: Assemble
 Step 3: Run
