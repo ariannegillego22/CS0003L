@@ -163,7 +163,8 @@ root@698d6ac01b5b:/work# ./toolchain
 Assembler ready
 Program ready
 
-<img width="497" height="305" alt="Screenshot 2026-09-10 at 11 16 14 PM" src="https://github.com/user-attachments/assets/745316ff-6fbe-45cd-aa82-088bef43253a" />
+<img width="497" height="305" alt="Screenshot 2026-09-10 at 11 16 14 PM" src="https://github.com/user-attachments/assets/ab2b213a-15fe-4d75-97e1-72d072ce22a9" />
+
 
 CASE 1:
     
@@ -304,8 +305,7 @@ Task complete.
 root@698d6ac01b5b:/work# echo $?
 0
 
-
-<img width="580" height="316" alt="Screenshot 2026-09-10 at 11 30 02 PM" src="https://github.com/user-attachments/assets/b2670861-80b3-4ffd-9a2c-5acfb71efd8e" />
+<img width="580" height="316" alt="Screenshot 2026-09-10 at 11 30 02 PM" src="https://github.com/user-attachments/assets/67012bec-692e-428a-a8c1-6ece630e8fc9" />
 
 
 CASE 1: 
