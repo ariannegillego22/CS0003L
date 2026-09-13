@@ -290,6 +290,7 @@ root@698d6ac01b5b:/work# ./exit_status
 Task complete.
 root@698d6ac01b5b:/work# echo $?
 25
+
 root@698d6ac01b5b:/work# nano exit_status.asm
 root@698d6ac01b5b:/work# nasm -f elf32 exit_status.asm -o exit_status.o
 root@698d6ac01b5b:/work# ld -m elf_i386 -o exit_status exit_status.o
@@ -297,6 +298,7 @@ root@698d6ac01b5b:/work# ./exit_status
 Task complete.
 root@698d6ac01b5b:/work# echo $?
 7
+
 root@698d6ac01b5b:/work# nano exit_status.asm
 root@698d6ac01b5b:/work# nasm -f elf32 exit_status.asm -o exit_status.o
 root@698d6ac01b5b:/work# ld -m elf_i386 -o exit_status exit_status.o
