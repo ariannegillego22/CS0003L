@@ -153,21 +153,32 @@ CASE 2 :
 ========== 2.TOOLCHAIN STATUS SCREEN =============
 
 root@698d6ac01b5b:/work# nano toolchain.asm
+
 root@698d6ac01b5b:/work# nasm -f elf32 toolchain.asm -o toolchain.o
+
 root@698d6ac01b5b:/work# ld -m elf_i386 -o toolchain toolchain.o
+
 root@698d6ac01b5b:/work# ./toolchain
 Assembler ready
 Linker ready
 Program ready
+
 root@698d6ac01b5b:/work# nano toolchain.asm
+
 root@698d6ac01b5b:/work# nasm -f elf32 toolchain.asm -o toolchain.o
+
 root@698d6ac01b5b:/work# ld -m elf_i386 -o toolchain toolchain.o
+
 root@698d6ac01b5b:/work# ./toolchain
 Assembler readyLinker ready
 Program ready
+
 root@698d6ac01b5b:/work# nano toolchain.asm
+
 root@698d6ac01b5b:/work# nasm -f elf32 toolchain.asm -o toolchain.o
+
 root@698d6ac01b5b:/work# ld -m elf_i386 -o toolchain toolchain.o
+
 root@698d6ac01b5b:/work# ./toolchain
 Assembler ready
 Program ready
@@ -293,26 +304,36 @@ CASE 3:
 =========== 3. EXIT STATUS REPORTER ============
 
 root@698d6ac01b5b:/work# nano exit_status.asm
+
 root@698d6ac01b5b:/work# nasm -f elf32 exit_status.asm -o exit_status.o
+
 root@698d6ac01b5b:/work# ld -m elf_i386 -o exit_status exit_status.o
+
 root@698d6ac01b5b:/work# ./exit_status
 Task complete.
 root@698d6ac01b5b:/work# echo $?
 25
 
 root@698d6ac01b5b:/work# nano exit_status.asm
+
 root@698d6ac01b5b:/work# nasm -f elf32 exit_status.asm -o exit_status.o
+
 root@698d6ac01b5b:/work# ld -m elf_i386 -o exit_status exit_status.o
+
 root@698d6ac01b5b:/work# ./exit_status
 Task complete.
 root@698d6ac01b5b:/work# echo $?
 7
 
 root@698d6ac01b5b:/work# nano exit_status.asm
+
 root@698d6ac01b5b:/work# nasm -f elf32 exit_status.asm -o exit_status.o
+
 root@698d6ac01b5b:/work# ld -m elf_i386 -o exit_status exit_status.o
+
 root@698d6ac01b5b:/work# ./exit_status
 Task complete.
+
 root@698d6ac01b5b:/work# echo $?
 0
 
@@ -385,27 +406,38 @@ CASE 3:
 ========== 4. Three-Step Workflow Block =========
 
 root@698d6ac01b5b:/work# nano workflow.asm
+
 root@698d6ac01b5b:/work# nasm -f elf32 workflow.asm -o workflow.o
+
 root@698d6ac01b5b:/work# ld -m elf_i386 -o workflow workflow.o
+
 root@698d6ac01b5b:/work# ./workflow
 Step 1: Edit
 Step 2: Assemble
 Step 3: Run
 root@698d6ac01b5b:/work# nano workflow.asm
+
 root@698d6ac01b5b:/work# nasm -f elf32 workflow.asm -o workflow.o
+
 root@698d6ac01b5b:/work# ld -m elf_i386 -o workflow workflow.o
+
 root@698d6ac01b5b:/work# ./workflow
 Step 1: Edit
 Step 2: Assemble
 Step 3: Run
 Step 4: Debug
 root@698d6ac01b5b:/work# nano workflow.asm
+
 root@698d6ac01b5b:/work# nasm -f elf32 workflow.asm -o workflow.o
+
 root@698d6ac01b5b:/work# ld -m elf_i386 -o workflow workflow.o
+
 root@698d6ac01b5b:/work# ./workflow
 Step 1: Editroot@698d6ac01b5b:/work# nano workflow.asm
 root@698d6ac01b5b:/work# nasm -f elf32 workflow.asm -o workflow.o
+
 root@698d6ac01b5b:/work# ld -m elf_i386 -o workflow workflow.o
+
 root@698d6ac01b5b:/work# ./workflow
 Step 1: Edit
 Step 2: Assemble
@@ -484,32 +516,51 @@ CASE 3:
 =========== 5. REPAIR THE SYSTEM NOTICE ==============
 
 root@698d6ac01b5b:/work# nano system_notice.asm
+
 root@698d6ac01b5b:/work# nasm -f elf32 system_notice.asm -o system_notice.o
+
 root@698d6ac01b5b:/work# ld -m elf_i386 -o system_notice system_notice.o
+
 root@698d6ac01b5b:/work# ./system_notice
 System notice: READY
+
 root@698d6ac01b5b:/work# echo $?
 0
 root@698d6ac01b5b:/work# nano system_notice.asm
+
 root@698d6ac01b5b:/work# nasm -f elf32 system_notice.asm -o system_notice.o
+
 root@698d6ac01b5b:/work# ld -m elf_i386 -o system_notice system_notice.o
+
 root@698d6ac01b5b:/work# ./system_notice
+
 root@698d6ac01b5b:/work# nano system_notice.asm
+
 root@698d6ac01b5b:/work# nasm -f elf32 system_notice.asm -o system_notice.o
+
 root@698d6ac01b5b:/work# ld -m elf_i386 -o system_notice system_notice.o
+
 root@698d6ac01b5b:/work# ./system_notice
 System notice: ONY
 root@698d6ac01b5b:/work# nano system_notice.asm
+
 root@698d6ac01b5b:/work# nasm -f elf32 system_notice.asm -o system_notice.o
+
 root@698d6ac01b5b:/work# ld -m elf_i386 -o system_notice system_notice.o
+
 root@698d6ac01b5b:/work# ./system_notice
 System notice: ON
 root@698d6ac01b5b:/work# nano system_notice.asm
+
 root@698d6ac01b5b:/work# ^C
+
 root@698d6ac01b5b:/work# nasm -f elf32 system_notice.asm -o system_notice.o
+
 root@698d6ac01b5b:/work# ld -m elf_i386 -o system_notice system_notice.o
+
 root@698d6ac01b5b:/work# ./system_notice
 System notice: READY
+
 root@698d6ac01b5b:/work# echo $?
 0
 
