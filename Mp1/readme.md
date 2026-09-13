@@ -1,5 +1,6 @@
  **MPL1**
 =========== 1. Assembly Lab Welcome Board ===========
+
 root@698d6ac01b5b:/work# nano welcome_board.asm
 root@698d6ac01b5b:/work# nasm -f elf32 welcome_board.asm -o welcome_board.o
 root@698d6ac01b5b:/work# ld -m elf_i386 -o welcome_board welcome_board.o
@@ -302,6 +303,7 @@ root@698d6ac01b5b:/work# ./exit_status
 Task complete.
 root@698d6ac01b5b:/work# echo $?
 0
+
 
 <img width="580" height="316" alt="Screenshot 2026-09-10 at 11 30 02 PM" src="https://github.com/user-attachments/assets/b2670861-80b3-4ffd-9a2c-5acfb71efd8e" />
 
