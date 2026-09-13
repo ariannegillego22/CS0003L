@@ -141,6 +141,7 @@ CASE 2 :
         int 0x80
 ---------------------------------------------------------------------------
 ========== 2.TOOLCHAIN STATUS SCREEN =============
+
 root@698d6ac01b5b:/work# nano toolchain.asm
 root@698d6ac01b5b:/work# nasm -f elf32 toolchain.asm -o toolchain.o
 root@698d6ac01b5b:/work# ld -m elf_i386 -o toolchain toolchain.o
@@ -279,6 +280,7 @@ CASE 3:
 
 ----------------------------------------------------------------------------
 =========== 3. EXIT STATUS REPORTER ============
+
 root@698d6ac01b5b:/work# nano exit_status.asm
 root@698d6ac01b5b:/work# nasm -f elf32 exit_status.asm -o exit_status.o
 root@698d6ac01b5b:/work# ld -m elf_i386 -o exit_status exit_status.o
@@ -368,6 +370,7 @@ CASE 3:
         int 0x80
 -----------------------------------------------------------------------
 ========== 4. Three-Step Workflow Block =========
+
 root@698d6ac01b5b:/work# nano workflow.asm
 root@698d6ac01b5b:/work# nasm -f elf32 workflow.asm -o workflow.o
 root@698d6ac01b5b:/work# ld -m elf_i386 -o workflow workflow.o
@@ -466,6 +469,7 @@ CASE 3:
         int 0x80
 -----------------------------------------------------------
 =========== 5. REPAIR THE SYSTEM NOTICE ==============
+
 root@698d6ac01b5b:/work# nano system_notice.asm
 root@698d6ac01b5b:/work# nasm -f elf32 system_notice.asm -o system_notice.o
 root@698d6ac01b5b:/work# ld -m elf_i386 -o system_notice system_notice.o
