@@ -1,3 +1,4 @@
+<img width="696" height="338" alt="Screenshot 2026-09-10 at 11 04 09 PM" src="https://github.com/user-attachments/assets/c2715f0e-27d7-4b9b-bb70-67488a3a3e79" />
 ===========Assembly Lab Welcome Board===========
 root@698d6ac01b5b:/work# nano welcome_board.asm
 root@698d6ac01b5b:/work# nasm -f elf32 welcome_board.asm -o welcome_board.o
@@ -21,113 +22,120 @@ Assembly Laboratory
 Mode: NASM 32-bit
 Status: Ready!
 CASE 1:
-section .data
-    line1 db "Assembly Laboratory", 10
-    len1 equ $ - line1
 
-    line2 db "Mode: NASM 32-bit", 10
-    len2 equ $ - line2
+    section .data
 
-    line3 db "Status: Ready", 10
-    len3 equ $ - line3
+        line1 db "Assembly Laboratory", 10
+        len1 equ $ - line1
 
-section .text
-    global _start
+        line2 db "Mode: NASM 32-bit", 10
+        len2 equ $ - line2
 
-_start:
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, line1
-    mov edx, len1
-    int 0x80
+        line3 db "Status: Ready", 10
+        len3 equ $ - line3
 
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, line2
-    mov edx, len2
-    int 0x80
+    section .text
+        global _start
+    
+    _start:
+        mov eax, 4
+        mov ebx, 1
+        mov ecx, line1
+        mov edx, len1
+        int 0x80
 
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, line3
-    mov edx, len3
-    int 0x80
+        mov eax, 4
+        mov ebx, 1
+        mov ecx, line2
+        mov edx, len2
+        int 0x80
 
-    mov eax, 1
-    mov ebx, 0
-    int 0x80
+        mov eax, 4
+        mov ebx, 1
+        mov ecx, line3
+        mov edx, len3
+        int 0x80
+
+        mov eax, 1
+        mov ebx, 0
+        int 0x80
+    
 CASE 2 : 
-section .data
-    line1 db "Assembly Laboratory", 10
-    len1 equ $ - line1
+    
+    section .data
 
-    line2 db "Mode: Linux ELF32", 10
-    len2 equ $ - line2
+        line1 db "Assembly Laboratory", 10
+        len1 equ $ - line1
 
-    line3 db "Status: Ready", 10
-    len3 equ $ - line3
+        line2 db "Mode: Linux ELF32", 10
+        len2 equ $ - line2
 
-section .text
-    global _start
+        line3 db "Status: Ready", 10
+        len3 equ $ - line3
 
-_start:
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, line1
-    mov edx, len1
-    int 0x80
+    section .text
+        global _start
 
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, line2
-    mov edx, len2
-    int 0x80
+    _start:
+        mov eax, 4
+        mov ebx, 1
+        mov ecx, line1
+        mov edx, len1
+        int 0x80
 
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, line3
-    mov edx, len3
-    int 0x80
+        mov eax, 4
+        mov ebx, 1
+        mov ecx, line2
+        mov edx, len2
+        int 0x80
 
-    mov eax, 1
-    mov ebx, 0
-    int 0x80
-  Case 3:
-  section .data
-    line1 db "Assembly Laboratory", 10
-    len1 equ $ - line1
+        mov eax, 4
+        mov ebx, 1
+        mov ecx, line3
+        mov edx, len3
+        int 0x80
 
-    line2 db "Mode: NASM 32-bit", 10
-    len2 equ $ - line2
+        mov eax, 1
+        mov ebx, 0
+        int 0x80
+        
+  CASE 3:
+    
+    section .data
+        line1 db "Assembly Laboratory", 10
+        len1 equ $ - line1
 
-    line3 db "Status: Ready!", 10
-    len3 equ $ - line3
+        line2 db "Mode: NASM 32-bit", 10
+        len2 equ $ - line2
 
-section .text
-    global _start
+        line3 db "Status: Ready!", 10
+        len3 equ $ - line3
 
-_start:
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, line1
-    mov edx, len1
-    int 0x80
+    section .text
+        global _start
 
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, line2
-    mov edx, len2
-    int 0x80
+    _start:
+        mov eax, 4
+        mov ebx, 1
+        mov ecx, line1
+        mov edx, len1
+        int 0x80
 
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, line3
-    mov edx, len3
-    int 0x80
+        mov eax, 4
+        mov ebx, 1
+        mov ecx, line2
+        mov edx, len2
+        int 0x80
 
-    mov eax, 1
-    mov ebx, 0
-    int 0x80
+        mov eax, 4
+        mov ebx, 1
+        mov ecx, line3
+        mov edx, len3
+        int 0x80
+
+        mov eax, 1
+        mov ebx, 0
+        int 0x80
 ----------------------------------------------
 ========== TOOLCHAIN STATUS SCREEN=============
 root@698d6ac01b5b:/work# nano toolchain.asm
