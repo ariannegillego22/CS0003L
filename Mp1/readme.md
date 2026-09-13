@@ -1,5 +1,5 @@
-<img width="696" height="338" alt="Screenshot 2026-09-10 at 11 04 09 PM" src="https://github.com/user-attachments/assets/c2715f0e-27d7-4b9b-bb70-67488a3a3e79" />
-===========Assembly Lab Welcome Board===========
+ **MPL1**
+=========== 1. Assembly Lab Welcome Board ===========
 root@698d6ac01b5b:/work# nano welcome_board.asm
 root@698d6ac01b5b:/work# nasm -f elf32 welcome_board.asm -o welcome_board.o
 root@698d6ac01b5b:/work# ld -m elf_i386 -o welcome_board welcome_board.o
@@ -21,6 +21,9 @@ root@698d6ac01b5b:/work# ./welcome_board
 Assembly Laboratory
 Mode: NASM 32-bit
 Status: Ready!
+
+<img width="696" height="338" alt="Screenshot 2026-09-10 at 11 04 09 PM" src="https://github.com/user-attachments/assets/e6f590b9-74dd-4b8f-9e54-3b8989fd48d6" />
+
 CASE 1:
 
     section .data
@@ -136,8 +139,8 @@ CASE 2 :
         mov eax, 1
         mov ebx, 0
         int 0x80
-----------------------------------------------
-========== TOOLCHAIN STATUS SCREEN=============
+---------------------------------------------------------------------------
+========== 2.TOOLCHAIN STATUS SCREEN =============
 root@698d6ac01b5b:/work# nano toolchain.asm
 root@698d6ac01b5b:/work# nasm -f elf32 toolchain.asm -o toolchain.o
 root@698d6ac01b5b:/work# ld -m elf_i386 -o toolchain toolchain.o
@@ -157,117 +160,125 @@ root@698d6ac01b5b:/work# ld -m elf_i386 -o toolchain toolchain.o
 root@698d6ac01b5b:/work# ./toolchain
 Assembler ready
 Program ready
+
+<img width="497" height="305" alt="Screenshot 2026-09-10 at 11 16 14 PM" src="https://github.com/user-attachments/assets/745316ff-6fbe-45cd-aa82-088bef43253a" />
+
 CASE 1:
-section .data
-
-    message1 db "Assembler ready", 0xA
-    length1 equ $ - message1
-
-    message2 db "Linker ready", 0xA
-    length2 equ $ - message2
-
-    message3 db "Program ready", 0xA
-    length3 equ $ - message3
-
-section .text
-    global _start
-
-_start:
-
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, message1
-    mov edx, length1
-    int 0x80
-
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, message2
-    mov edx, length2
-    int 0x80
     
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, message3
-    mov edx, length3
-    int 0x80
+    section .data
 
-    mov eax, 1
-    mov ebx, 0
-    int 0x80
+        message1 db "Assembler ready", 0xA
+        length1 equ $ - message1
+
+        message2 db "Linker ready", 0xA
+        length2 equ $ - message2
+
+        message3 db "Program ready", 0xA
+        length3 equ $ - message3
+
+    section .text
+        global _start
+
+    _start:
+
+        mov eax, 4
+        mov ebx, 1
+        mov ecx, message1
+        mov edx, length1
+        int 0x80
+
+        mov eax, 4
+        mov ebx, 1
+        mov ecx, message2
+        mov edx, length2
+        int 0x80
+    
+        mov eax, 4
+        mov ebx, 1
+        mov ecx, message3
+        mov edx, length3
+        int 0x80
+
+        mov eax, 1
+        mov ebx, 0
+        int 0x80
+  
   CASE 2:
-  section .data
+  
+      section .data
 
-    message1 db "Assembler ready", 
-    length1 equ $ - message1
+        message1 db "Assembler ready", 
+        length1 equ $ - message1
 
-    message2 db "Linker ready", 0xA
-    length2 equ $ - message2
+        message2 db "Linker ready", 0xA
+        length2 equ $ - message2
 
-    message3 db "Program ready", 0xA
-    length3 equ $ - message3
+        message3 db "Program ready", 0xA
+        length3 equ $ - message3
 
-section .text
-    global _start
+    section .text
+        global _start
 
-_start:
+    _start:
    
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, message1
-    mov edx, length1
-    int 0x80
+        mov eax, 4
+        mov ebx, 1
+        mov ecx, message1
+        mov edx, length1
+        int 0x80
 
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, message2
-    mov edx, length2
-    int 0x80
+        mov eax, 4
+        mov ebx, 1
+        mov ecx, message2
+        mov edx, length2
+        int 0x80
     
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, message3
-    mov edx, length3
-    int 0x80
+        mov eax, 4
+        mov ebx, 1
+        mov ecx, message3
+        mov edx, length3
+        int 0x80
 
-    mov eax, 1
-    mov ebx, 0
-    int 0x80
-  CASE 3:
-   section .data
+        mov eax, 1
+        mov ebx, 0
+        int 0x80
 
-    message1 db "Assembler ready", 0xA
-    length1 equ $ - message1
+CASE 3:
+       
+       section .data
 
-    message2 db "Linker ready", 0xA
-    length2 equ $ - message2
+        message1 db "Assembler ready", 0xA
+        length1 equ $ - message1
 
-    message3 db "Program ready", 0xA
-    length3 equ $ - message3
+        message2 db "Linker ready", 0xA
+        length2 equ $ - message2
 
-section .text
-    global _start
+        message3 db "Program ready", 0xA
+        length3 equ $ - message3
 
-_start:
+    section .text
+        global _start
+
+    _start:
    
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, message1
-    mov edx, length1
-    int 0x80
+        mov eax, 4
+        mov ebx, 1
+        mov ecx, message1
+        mov edx, length1
+        int 0x80
     
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, message3
-    mov edx, length3
-    int 0x80
+        mov eax, 4
+        mov ebx, 1
+        mov ecx, message3
+        mov edx, length3
+        int 0x80
 
-    mov eax, 1
-    mov ebx, 0
-    int 0x80
+        mov eax, 1
+        mov ebx, 0
+        int 0x80
 
----------------------------------------------
-==============EXIT STATUS REPORTER============
+----------------------------------------------------------------------------
+=========== 3. EXIT STATUS REPORTER ============
 root@698d6ac01b5b:/work# nano exit_status.asm
 root@698d6ac01b5b:/work# nasm -f elf32 exit_status.asm -o exit_status.o
 root@698d6ac01b5b:/work# ld -m elf_i386 -o exit_status exit_status.o
@@ -290,66 +301,73 @@ Task complete.
 root@698d6ac01b5b:/work# echo $?
 0
 
+<img width="580" height="316" alt="Screenshot 2026-09-10 at 11 30 02 PM" src="https://github.com/user-attachments/assets/b2670861-80b3-4ffd-9a2c-5acfb71efd8e" />
+
+
 CASE 1: 
-section .data
-    message db "Task complete.", 10
-    length equ $ - message
+    
+    section .data
+        message db "Task complete.", 10
+        length equ $ - message
 
-section .text
-    global _start
+    section .text
+        global _start
 
-_start:
-    ; Print the message
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, message
-    mov edx, length
-    int 0x80
+    _start:
+   
+        mov eax, 4
+        mov ebx, 1
+        mov ecx, message
+        mov edx, length
+        int 0x80
 
-    ; Exit with status 25
-    mov eax, 1
-    mov ebx, 25
-    int 0x80
+        mov eax, 1
+        mov ebx, 25
+        int 0x80
+
 CASE 2:
-section .data
+    
+    section .data
 
-    message db "Task complete.", 10
-    length equ $ - message
+        message db "Task complete.", 10
+        length equ $ - message
 
-section .text
-    global _start
+    section .text
+        global _start
 
-_start:
+    _start:
 
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, message
-    mov edx, length
-    int 0x80
+        mov eax, 4
+        mov ebx, 1
+        mov ecx, message
+        mov edx, length
+        int 0x80
 
-    mov eax, 1
-    mov ebx, 7
-    int 0x80
+        mov eax, 1
+        mov ebx, 7
+        int 0x80
+        
 CASE 3:
-section .data
-    message db "Task complete.", 10
-    length equ $ - message
 
-section .text
-    global _start
+    section .data
+        message db "Task complete.", 10
+        length equ $ - message
 
-_start:
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, message
-    mov edx, length
-    int 0x80
+    section .text
+        global _start
 
-    mov eax, 1
-    mov ebx, 0
-    int 0x80
-----------------------------------------
-======Three-Step Workflow Block=========
+    _start:
+        mov eax, 4
+        mov ebx, 1
+        mov ecx, message
+        mov edx, length
+        int 0x80
+
+        mov eax, 1
+        mov ebx, 0
+        int 0x80
+-----------------------------------------------------------------------
+========== 4. Three-Step Workflow Block =========
 root@698d6ac01b5b:/work# nano workflow.asm
 root@698d6ac01b5b:/work# nasm -f elf32 workflow.asm -o workflow.o
 root@698d6ac01b5b:/work# ld -m elf_i386 -o workflow workflow.o
@@ -377,71 +395,77 @@ Step 1: Edit
 Step 2: Assemble
 Step 3: Run
 
+<img width="573" height="391" alt="Screenshot 2026-09-10 at 11 46 37 PM" src="https://github.com/user-attachments/assets/182699d2-d14e-42f2-8ad1-7406f66280ef" />
+
+
 CASE 1:
-section .data
-    workflow db "Step 1: Edit", 10
-             db "Step 2: Assemble", 10
-             db "Step 3: Run", 10
-    workflow_len equ $ - workflow
 
-section .text
-    global _start
+    section .data
+        workflow db "Step 1: Edit", 10
+                 db "Step 2: Assemble", 10
+                 db "Step 3: Run", 10
+        workflow_len equ $ - workflow
 
-_start:
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, workflow
-    mov edx, workflow_len
-    int 0x80
+    section .text
+        global _start
 
-    mov eax, 1
-    mov ebx, 0
-    int 0x80
+    _start:
+        mov eax, 4
+        mov ebx, 1
+        mov ecx, workflow
+        mov edx, workflow_len
+        int 0x80
+
+        mov eax, 1
+        mov ebx, 0
+        int 0x80
+  
   CASE 2:
   
-section .data
-    workflow db "Step 1: Edit", 10
-             db "Step 2: Assemble", 10
-             db "Step 3: Run", 10
-             db "Step 4: Debug", 10
-    workflow_len equ $ - workflow
+    section .data
+        workflow db "Step 1: Edit", 10
+                 db "Step 2: Assemble", 10
+                 db "Step 3: Run", 10
+                 db "Step 4: Debug", 10
+        workflow_len equ $ - workflow
 
-section .text
-    global _start
+    section .text
+        global _start
 
-_start:
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, workflow
-    mov edx, workflow_len
-    int 0x80
+    _start:
+        mov eax, 4
+        mov ebx, 1
+        mov ecx, workflow
+        mov edx, workflow_len
+        int 0x80
 
-    mov eax, 1
-    mov ebx, 0
-    int 0x80
+        mov eax, 1
+        mov ebx, 0
+        int 0x80
 
 CASE 3:
-section .data
-    workflow db "Step 1: Edit", 10
-             db "Step 2: Assemble", 10
-             db "Step 3: Run", 10
-    workflow_len equ $ - workflow
+    
+    section .data
+        workflow db "Step 1: Edit", 10
+                 db "Step 2: Assemble", 10
+                 db "Step 3: Run", 10
+        workflow_len equ $ - workflow
 
-section .text
-    global _start
+    section .text
+        global _start
 
-_start:
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, workflow
-    mov edx, 12
-    int 0x80
+    _start:
+        mov eax, 4
+        mov ebx, 1
+        mov ecx, workflow
+        mov edx, 12
+        int 0x80
 
-    mov eax, 1
-    mov ebx, 0
-    int 0x80
+        mov eax, 1
+        mov ebx, 0
+        int 0x80
 -----------------------------------------------------------
-========REPAIR THE SYSTEM NOTICE==============
+=========== 5. REPAIR THE SYSTEM NOTICE ==============
 root@698d6ac01b5b:/work# nano system_notice.asm
 root@698d6ac01b5b:/work# nasm -f elf32 system_notice.asm -o system_notice.o
 root@698d6ac01b5b:/work# ld -m elf_i386 -o system_notice system_notice.o
@@ -472,62 +496,69 @@ System notice: READY
 root@698d6ac01b5b:/work# echo $?
 0
 
+<img width="592" height="431" alt="Screenshot 2026-09-10 at 11 58 13 PM" src="https://github.com/user-attachments/assets/4ad7e445-f0e6-41fb-85fa-7420ba9f53b9" />
+
+
 CASE 1:
-section .data
-    message db "System notice: READY", 10
-    length equ $ - message
 
-section .text
-    global _start
+    section .data
+        message db "System notice: READY", 10
+        length equ $ - message
 
-_start:
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, message
-    mov edx, length
-    int 0x80
+    section .text
+        global _start
 
-    mov eax, 1
-    mov ebx, 0
-    int 0x80
+    _start:
+        mov eax, 4
+        mov ebx, 1
+        mov ecx, message
+        mov edx, length
+        int 0x80
+
+        mov eax, 1
+        mov ebx, 0
+        int 0x80
 
 
 CASE 2:
-section .data
-    message db "System notice: READY", 10
-    length equ $ - message
 
-section .text
-    global _start
+    section .data
+        message db "System notice: READY", 10
+        length equ $ - message
 
-_start:
-    mov eax, 4
-    mov ebx, message
-    mov ecx, message
-    mov edx, length
-    int 0x80
+    section .text
+        global _start
 
-    mov eax, 1
-    mov ebx, 0
-    int 0x80
+    _start:
+        mov eax, 4
+        mov ebx, message
+        mov ecx, message
+        mov edx, length
+        int 0x80
+
+        mov eax, 1
+        mov ebx, 0
+        int 0x80
+
 CASE 3:
-section .data
-    message db "System notice: ON", 10
-    length equ $ - message
+    
+    section .data
+        message db "System notice: ON", 10
+        length equ $ - message
 
-section .text
-    global _start
+    section .text
+        global _start
 
-_start:
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, message
-    mov edx, length
-    int 0x80
+    _start:
+        mov eax, 4
+        mov ebx, 1
+        mov ecx, message
+        mov edx, length
+        int 0x80
 
-    mov eax, 1
-    mov ebx, 0
-    int 0x80
+        mov eax, 1
+        mov ebx, 0
+        int 0x80
 
 
 
