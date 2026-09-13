@@ -2,22 +2,31 @@
 =========== 1. Assembly Lab Welcome Board ===========
 
 root@698d6ac01b5b:/work# nano welcome_board.asm
+
 root@698d6ac01b5b:/work# nasm -f elf32 welcome_board.asm -o welcome_board.o
+
 root@698d6ac01b5b:/work# ld -m elf_i386 -o welcome_board welcome_board.o
+
 root@698d6ac01b5b:/work# ./welcome_board
 Assembly Laboratory
 Mode: NASM 32-bit
 Status: Ready
 root@698d6ac01b5b:/work# nano welcome_board.asm
+
 root@698d6ac01b5b:/work# nasm -f elf32 welcome_board.asm -o welcome_board.o
+
 root@698d6ac01b5b:/work# ld -m elf_i386 -o welcome_board welcome_board.o
+
 root@698d6ac01b5b:/work# ./welcome_board
 Assembly Laboratory
 Mode: Linux ELF32
 Status: Ready
 root@698d6ac01b5b:/work# nano welcome_board.asm
+
 root@698d6ac01b5b:/work# nasm -f elf32 welcome_board.asm -o welcome_board.o
+
 root@698d6ac01b5b:/work# ld -m elf_i386 -o welcome_board welcome_board.o
+
 root@698d6ac01b5b:/work# ./welcome_board
 Assembly Laboratory
 Mode: NASM 32-bit
